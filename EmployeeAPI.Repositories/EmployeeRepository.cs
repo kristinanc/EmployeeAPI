@@ -85,7 +85,7 @@ namespace EmployeeAPI.Repositories
 
             if (!string.IsNullOrEmpty(seedData.Trim()))
             {
-                var seedArray = seedData.Split("\r\n");
+                var seedArray = seedData.Split("\n");
                 for (int i = 0; i < seedArray.Length; i++)
                 {
 

@@ -24,9 +24,10 @@ namespace EmployeeAPI.Services
 
             else
             {
-                var filtered = employees.Select(x => new EmployeeProj { LastName = x.LastName, FirstName = x.FirstName, Department = x.Department }).ToList();
+                var filtered = employees.Select(x => new EmployeeProj { LastName = x.LastName, FirstName = x.FirstName,Department = x.Department })
+                                .OrderBy(y => y.LastName).ThenBy(z => z.FirstName).ToList();
 
-                return filtered.OrderBy(y => y.LastName).ThenBy(z => z.FirstName).ToList();
+                return filtered;
 
             }
 
